@@ -19,7 +19,7 @@ export const getProducts = async (): Promise<Product[]> => {
     const response = await axios.get<Product[]>(API_URL);
     return response.data;
   } catch (error) {
-    console.error("Error al obtener productos:", error);
-    throw new Error("No se pudieron cargar los productos");
+    console.error("Error fetching products:", error);
+    throw new Error("Could not load products");
   }
 };
